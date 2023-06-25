@@ -1,0 +1,120 @@
+body{
+   margin-left:700px ;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(15, 17, 17);
+    overflow: hidden;
+    font-family: bday;
+}
+.giftcontainer{
+    position: relative;
+}
+.giftcontainer::before{
+    content: '';
+    position: absolute;
+    width: 170px;
+    height: 20px;
+    background-color: rbga(0,0,0,0.4);
+    border-radius: 50%;
+    top: 90px;
+    left: -10px;
+
+}
+.gift{
+    position: absolute;
+    width: 150px;
+    height: 100px;
+    background-color: #e9c36a;
+}
+.gift::before{
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 100px;
+    background-color: #e76f51;
+    left: 62px;
+
+}
+.gift::after{
+    content: '';
+    position: absolute;
+    box-shadow: 0 10px rbga(0,0,0,0.3);
+    width: 150px;
+    height: 100px;
+}
+#click{
+    display: none;
+
+}
+.click{
+    position: absolute;
+    background-color: #e9c46a;
+    width: 170px;
+    height: 40px;
+    top: -40px;
+    left: -10px;
+    transform-origin: bottom left;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.click::before{
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 40px;
+    background-color: #e76f51;
+    left: 72px;
+
+}
+.click::after{
+    content: '';
+    position: absolute;
+    border-bottom: 30px solid #e76f51;
+    border-top: 30px solid #e76f51;
+    border-left: 0px solid transparent ;
+    border-right: 30px solid transparent;
+    transform: rotate(-90deg);
+    left: 65px;
+    top: -47px ;
+    width: 5px;
+    height: 0px;
+}
+#click:checked+.click{
+    transform: rotate(-110deg)scale(0.85);
+}
+#click:checked~.wishes{
+    transform: translateY(-120px);
+}
+.wishes{
+    position: absolute;
+    transform: .5s;
+    color: #333;
+    font-size: 20px;
+    text-transform: capitalize;
+    text-align: center;
+    z-index: -1;
+    left:-10px;
+    color: red;
+    text-shadow:  0 0 10px #020202;
+}
+a{
+    background: radial-gradient(
+    circle at 55% 55%,
+    hsl(0, 100%, 50%),
+    hsl(30, 100%, 50%),
+    hsl(60, 100%, 50%),
+    hsl(140, 100%, 50%),
+    hsl(190, 100%, 50%),
+    hsl(260, 100%, 50%),
+    hsl(330, 100%, 50%)40%
+  );
+    top:  340px;
+    position: absolute;
+}
+
+@font-face {
+    font-family: bday;
+    src: url(bday.ttf);
+}
